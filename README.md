@@ -62,11 +62,28 @@ Response:
     "status":"success",
     "token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkZTdkMGM4MC05YTJhLTRmNzEtOWUwYi1hNTVjMWRmYTJmMjEiLCJpYXQiOjE3MTg4MDkxNzMsImV4cCI6MTcxODgxMjc3M30.oOmUtYzx2pqeAP21G0kWVCJCUYVVlMVjJ7oYeaOwlAA"
 }
-
-
+```
 
 #### Logout
+Logging out uses the Session Cookie to identify the user the provides an expired cookie to invalid the original token.
 
+This requires one field in the Cookies.
+
+* token
+
+Request:
+```
+curl -X POST http://localhost:8000/api/auth/logout \
+  --cookie 'token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkZTdkMGM4MC05YTJhLTRmNzEtOWUwYi1hNTVjMWRmYTJmMjEiLCJpYXQiOjE3MTg4MDkxNzMsImV4cCI6MTcxODgxMjc3M30.oOmUtYzx2pqeAP21G0kWVCJCUYVVlMVjJ7oYeaOwlAA' \
+  -H 'Content-Type: application/json'
+```
+
+Response:
+```
+{
+    "status":"success"
+}
+```
 
 ## Installation
 
