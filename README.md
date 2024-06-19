@@ -87,3 +87,24 @@ Response:
 
 ## Installation
 
+If you would like to run your own CCP User Cache, you can follow these steps.
+
+* Clone the repo locally
+ `git clone https://github.com/TargetedEntropy/ccp-user-cache.git`
+
+* Rename `env.sample` to `.env` and modify the fields.
+ `mv env.sample .env`
+
+* Inside the directory, start the Postgres database instances
+ `docker-compose -f docker-compose.no_api.yml up -d`
+
+ * Install SQLx
+ `cargo install sqlx-cli --no-default-features --features postgres`
+ 
+ * Perform SQL Migrations
+ `sqlx migrate run`
+
+ * Start the API
+ `cargo run`
+
+
