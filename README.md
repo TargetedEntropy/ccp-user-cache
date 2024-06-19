@@ -2,7 +2,7 @@
 
 A Rust API to provide user details for CCP Users in the popular Space MMO, Eve Online.
 
-This service supports JWT Authentication and Authorization to provide user access to cached API data.  As the official (https://esi.evetech.net/)[API] only supports a 30day history, users can access historical data beyond that period.
+This service supports JWT Authentication and Authorization to provide user access to cached API data.  As the official [https://esi.evetech.net/](API) only supports a 30day history, users can access historical data beyond that period.
 
 ## Usage
 
