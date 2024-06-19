@@ -19,9 +19,9 @@ To register a user, there are four required fields.
 
 Request:
 ```
-curl -X POST http://localhost:8000/api/auth/register \\
+curl -X POST http://localhost:8000/api/auth/register \
    -d '{"name":"Bob Hope","email": "username@gmail.com", "password": "mkFzMYqKtv5Bha6r8GX9DP", "passwordConfirm": "mkFzMYqKtv5Bha6r8GX9DP"}' \
-    -H 'Content-Type: application/json'
+   -H 'Content-Type: application/json'
 ```
 
 Response:
