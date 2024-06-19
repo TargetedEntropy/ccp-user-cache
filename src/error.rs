@@ -118,13 +118,6 @@ impl HttpError {
         }
     }
 
-    pub fn not_found(message: impl Into<String>) -> Self {
-        HttpError {
-            message: message.into(),
-            status: 404,
-        }
-    }
-
     pub fn into_http_response(self) -> HttpResponse {
         match self.status {
             400 => HttpResponse::BadRequest().json(Response {

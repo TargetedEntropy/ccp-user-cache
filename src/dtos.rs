@@ -16,8 +16,7 @@ pub struct RegisterUserDto {
     )]
     pub email: String,
     #[validate(
-        length(min = 1, message = "Password is required"),
-        length(min = 6, message = "Password must be at least 6 characters")
+        length(min = 1, message = "Password is required")
     )]
     pub password: String,
     #[validate(
@@ -36,8 +35,7 @@ pub struct LoginUserDto {
     )]
     pub email: String,
     #[validate(
-        length(min = 1, message = "Password is required"),
-        length(min = 6, message = "Password must be at least 6 characters")
+        length(min = 1, message = "Password is required")
     )]
     pub password: String,
 }
