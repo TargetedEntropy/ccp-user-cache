@@ -35,6 +35,8 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         .await?;
 
     let db_client = DBClient::new(pool);
+
+    // Start the AppState
     let app_state: AppState = AppState {
         env: config.clone(),
         db_client,
@@ -46,6 +48,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         format!("Server is running on http://localhost:{}", config.port)
     );
 
+    // START THE SERVER GROG
     HttpServer::new(move || {
         App::new()
             .app_data(web::Data::new(app_state.clone()))
